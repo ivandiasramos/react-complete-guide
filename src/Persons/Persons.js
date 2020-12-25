@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Person from "./../Person/Person";
 
-const Persons = () => {
+const Persons = (props => {
   const [personsState, setPersonsState] = useState({
     persons: [
       { key: 1, name: "Ivan", age: "30" },
@@ -41,6 +41,6 @@ const Persons = () => {
       }
     </div>
   );
-};
+})
 
 export default Persons;

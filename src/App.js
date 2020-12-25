@@ -8,9 +8,11 @@ const app = (props) => {
   });
 
   let persons = null;
+  let toggleButtonColor = 'toggle-button-inactive';
 
   if (showPersonsState.showPersons) {
     persons = <Persons />;
+    toggleButtonColor = 'toggle-button-active';
   }
 
   const togglePersonsHandler = () => {
@@ -23,6 +25,7 @@ const app = (props) => {
     <div className="text-center">
       <h1>Hi, I'm react app</h1>
       <button
+        className={toggleButtonColor}
         onClick={togglePersonsHandler}
       >
         Switch Name
